@@ -63,6 +63,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.5rem 1rem;
+            position: relative;
         }
         
         .logo {
@@ -81,12 +82,19 @@
             font-size: 1.5rem;
             color: var(--black);
             cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .nav-links-container {
+            display: flex;
         }
         
         .nav-links {
             display: flex;
             gap: 1rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
         
         .nav-links a {
@@ -109,26 +117,31 @@
                 display: block;
             }
             
-            .nav-links {
-                display: none;
+            .nav-links-container {
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
                 background-color: var(--cream);
-                padding: 1rem;
-                flex-direction: column;
-                gap: 0.5rem;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                display: none;
             }
             
-            .nav-links.active {
-                display: flex;
+            .nav-links-container.active {
+                display: block;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
             }
             
             .nav-links a {
                 display: block;
-                padding: 0.75rem;
+                padding: 1rem;
                 text-align: center;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             }
@@ -138,7 +151,6 @@
             }
             
             .hero {
-                height: 60vh;
                 margin-top: 3.5rem;
             }
             
@@ -233,10 +245,17 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
+            const navContainer = document.querySelector('.nav-links-container');
             
             menuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
+                navContainer.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.nav')) {
+                    navContainer.classList.remove('active');
+                }
             });
         });
     </script>
@@ -274,12 +293,14 @@
         <nav class="nav container">
             <a href="#" class="logo">Happy Days Diner</a>
             <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-            <ul class="nav-links">
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#findus">Find Us</a></li>
-            </ul>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#findus">Find Us</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
