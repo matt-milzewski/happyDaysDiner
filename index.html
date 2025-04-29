@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="1950s retro diner in Maryborough QLD serving classic burgers, shakes & rock 'n' roll vibes. Family-run since 2010.">
+    <title>Happy Days Diner | 1950s Retro Diner in Maryborough QLD</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --neon-pink: #ff6b81;
+            --turquoise: #2dd4bf;
+            --cream: #fff7ed;
+            --black: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--cream);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: var(--cream);
+            padding: 1rem 0;
+            z-index: 100;
+            border-bottom: 8px solid transparent;
+            background-image: repeating-linear-gradient(45deg, var(--black) 0, var(--black) 8px, var(--cream) 8px, var(--cream) 16px);
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5rem;
+            color: var(--neon-pink);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .hero {
+            height: 100vh;
+            background-image: url('assets/img/hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--cream);
+            padding: 0 1rem;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--neon-pink);
+            color: var(--cream);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+    
+    <!-- Async CSS -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Happy Days Diner",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "92 Ferry St",
+            "addressLocality": "Maryborough",
+            "addressRegion": "QLD",
+            "postalCode": "4650",
+            "addressCountry": "AU"
+        },
+        "telephone": "+61741234567",
+        "priceRange": "$$",
+        "menu": "https://happydaysdiner.com.au/#menu",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "07:00",
+                "closes": "20:00"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Happy Days Diner</a>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#findus">Find Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Step Back to the Fabulous '50s</h1>
+            <p>Burgers, shakes & rock 'n' roll—served all day, every day.</p>
+            <div class="cta-buttons">
+                <a href="#menu" class="btn">View Menu</a>
+                <a href="#findus" class="btn">Get Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <p>All-day breakfast, legendary burgers & freak-shakes.</p>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <h3>Elvis Burger</h3>
+                    <p class="price">$15.90</p>
+                </div>
+                <div class="menu-card">
+                    <h3>Classic Dog</h3>
+                    <p class="price">$9.90</p>
+                </div>
+                <div class="menu-card">
+                    <h3>Nutella Freak-Shake</h3>
+                    <p class="price">$11.50</p>
+                </div>
+                <div class="menu-card">
+                    <h3>Loaded Fries</h3>
+                    <p class="price">$7.50</p>
+                </div>
+                <div class="menu-card">
+                    <h3>Gluten-Free Beet Burger</h3>
+                    <p class="price">$16.90</p>
+                </div>
+            </div>
+            <p class="menu-note">*GF buns & vegetarian swaps available—just ask!*</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="assets/img/about.jpg" alt="Happy Days Diner interior with 1957 jukebox" loading="lazy">
+                </div>
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p>In 2010, our founders discovered a rare 1957 jukebox in a dusty old warehouse. This serendipitous find sparked a passion for preserving the golden era of American diners. What started as a simple restoration project evolved into a full-blown love affair with vintage Americana.</p>
+                    <p>Today, Happy Days Diner stands as a testament to that passion. Every detail, from our checkerboard floors to our neon signs, has been carefully curated to transport you back to the fabulous '50s. We're proud to be a family-run establishment, serving up not just delicious food, but a genuine slice of nostalgia.</p>
+                    <p>Our commitment to authenticity extends beyond decor. We source local ingredients whenever possible, ensuring that while our style may be retro, our quality is thoroughly modern. Whether you're a local or just passing through Maryborough, we invite you to step back in time and experience the magic of the '50s with us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <a href="#img1" class="gallery-item">
+                    <img src="assets/img/burger.jpg" alt="Classic diner burger" loading="lazy">
+                </a>
+                <a href="#img2" class="gallery-item">
+                    <img src="assets/img/shake.jpg" alt="Freak-shake with toppings" loading="lazy">
+                </a>
+                <a href="#img3" class="gallery-item">
+                    <img src="assets/img/interior.jpg" alt="Diner interior" loading="lazy">
+                </a>
+                <a href="#img4" class="gallery-item">
+                    <img src="assets/img/breakfast.jpg" alt="All-day breakfast" loading="lazy">
+                </a>
+                <a href="#img5" class="gallery-item">
+                    <img src="assets/img/jukebox.jpg" alt="1957 jukebox" loading="lazy">
+                </a>
+                <a href="#img6" class="gallery-item">
+                    <img src="assets/img/dessert.jpg" alt="Diner desserts" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="findus" class="section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <address>
+                        <p>92 Ferry St, Maryborough QLD 4650</p>
+                    </address>
+                    <div class="hours">
+                        <h3>Opening Hours</h3>
+                        <table>
+                            <tr>
+                                <td>Monday - Sunday:</td>
+                                <td>07:00 - 20:00</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="contact-links">
+                        <a href="tel:+61741234567">Call Us</a>
+                        <a href="mailto:info@happydaysdiner.com.au">Email Us</a>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.9999999999995!2d152.7!3d-25.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDMwJzAwLjAiUyAxNTLCsDQyJzAwLjAiRQ!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus"
+                        width="100%"
+                        height="300"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://facebook.com/happydaysdiner" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://instagram.com/happydaysdiner" target="_blank" rel="noopener">Instagram</a>
+            </div>
+            <p>&copy; Happy Days Diner 2025</p>
+            <p class="footer-note">Site built with ♫ and a whole lotta milkshakes.</p>
+        </div>
+    </footer>
+</body>
+</html> 
