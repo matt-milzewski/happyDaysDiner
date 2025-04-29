@@ -291,8 +291,7 @@ p {
     background-color: var(--cream);
     padding: 1rem 0;
     z-index: 100;
-    border-bottom: 8px solid transparent;
-    background-image: repeating-linear-gradient(45deg, var(--black) 0, var(--black) 8px, var(--cream) 8px, var(--cream) 16px);
+    border-bottom: 2px solid var(--neon-pink);
 }
 
 .nav {
@@ -325,10 +324,12 @@ p {
     font-weight: 600;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: var(--cream);
 }
 
 .nav-links a:hover {
     background-color: var(--neon-pink);
     color: var(--cream);
+    transform: translateY(-2px);
 } 
