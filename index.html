@@ -72,6 +72,14 @@
             color: var(--neon-pink);
             text-decoration: none;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-img {
+            height: 2.5rem;
+            width: auto;
         }
         
         /* Mobile Menu Button */
@@ -180,6 +188,14 @@
             
             .map {
                 height: 250px;
+            }
+            
+            .logo-img {
+                height: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
             }
         }
         
@@ -291,7 +307,10 @@
 <body>
     <header class="header">
         <nav class="nav container">
-            <a href="#" class="logo">Happy Days Diner</a>
+            <a href="#" class="logo">
+                <img src="assets/img/HappyDaysDinerLogo.png" alt="Happy Days Diner Logo" class="logo-img">
+                Happy Days Diner
+            </a>
             <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
             <div class="nav-links-container">
                 <ul class="nav-links">
